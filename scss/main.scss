@@ -44,7 +44,7 @@ header {
 }
 
 .text-secondary {
-  color: $secondary;
+  color: $secondary-color;
 }
 
 main {
@@ -58,7 +58,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary;
+        color: $secondary-color;
         @include easeOut();
       }
     }
