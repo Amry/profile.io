@@ -11,10 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Welcome to my Portfolio</title>
+    <title>About me</title>
   </head>
 
-  <body id="bg-img">
+  <body>
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -24,10 +24,8 @@
       <nav class="menu">
         <div class="menu-branding"><div class="portrait"></div></div>
         <ul class="menu-nav">
+          <li class="nav-item"><a href="/dist" class="nav-link">Home</a></li>
           <li class="nav-item current">
-            <a href="/" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
             <a href="about.html" class="nav-link">About me</a>
           </li>
           <li class="nav-item">
@@ -40,18 +38,35 @@
       </nav>
     </header>
 
-    <main id="home">
-      <h1 class="lg-heading">
-        Amry <span class="text-secondary">Olimov</span>
-      </h1>
-      <h2 class="sm-heading">Web Developer, Engineer</h2>
-      <div class="icons">
-        <a href="#!"> <i class="fab fa-twitter fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-linkedin fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-twitter fa-2x"></i> </a>
-        <a href="#!"> <i class="fab fa-github fa-2x"></i> </a>
+    <main id="about">
+      <h1 class="lg-heading">About <span class="text-secondary">me</span></h1>
+      <h2 class="sm-heading">Let me tell about me a bit</h2>
+      <div class="about-info">
+        <img src="img/profile.jpg" alt="Me" class="bio_image" />
+
+        <div class="bio">
+          <h3 class="text-secondary">BIO</h3>
+          <p>About me</p>
+        </div>
+        <div class="job job-1">
+          <h3>Workshop 1</h3>
+          <h6>Fullstack Developer</h6>
+          <p>Workshop 1 content</p>
+        </div>
+        <div class="job job-2">
+          <h3>Workshop 2</h3>
+          <h6>Front End Developer</h6>
+          <p>Workshop 2 content</p>
+        </div>
+        <div class="job job-3">
+          <h3>Workshop 3</h3>
+          <h6>Front End Developer</h6>
+          <p>Workshop 3 content</p>
+        </div>
       </div>
     </main>
+
+    <footer id="main-footer">Copyright &copy: 2018</footer>
     <script src="js/main.js"></script>
   </body>
 </html>

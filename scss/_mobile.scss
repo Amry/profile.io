@@ -30,7 +30,9 @@
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
+    &.nav-link {
+      font-size: 10px;
+    }
   }
 
   .menu-branding {
@@ -42,6 +44,16 @@
       width: 150px;
       height: 150;
     }
+  }
+
+  //About page;
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
   }
 }
 
