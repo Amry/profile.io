@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amry/modernized_portfolio_page"
+  },
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
