@@ -1,11 +1,11 @@
 {
-  "name": "modernprofilepage",
+  "name": "profile.io",
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/amry/modernized_portfolio_page"
+    "url": "git://github.com/amry/profile.io.git"
   },
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
