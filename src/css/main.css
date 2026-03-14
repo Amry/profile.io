@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-slate-900);
+  --color-secondary: var(--color-amber-400);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  @apply h-full m-0 leading-relaxed font-sans bg-slate-900 text-slate-100 antialiased scroll-smooth;
+}
+
+#bg-img {
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url(../img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  @apply fixed z-50 w-full px-8 py-6;
+}
+
+.menu-btn {
+  @apply absolute z-60 right-8 top-8 cursor-pointer transition-all duration-500 ease-out hover:scale-110;
+}
+
+.menu-btn .btn-line {
+  @apply w-8 h-0.5 mb-2 bg-white rounded-full transition-all duration-500 ease-out;
+}
+
+/* Menu Toggle State */
+.menu-btn.close {
+  @apply rotate-180;
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  @apply rotate-45 translate-y-2.5;
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  @apply opacity-0 scale-x-0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  @apply -rotate-45 -translate-y-2.5;
+}
+
+.menu {
+  @apply fixed top-0 left-0 w-full h-screen invisible transition-all duration-700 z-40;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu.show {
+  @apply visible;
+}
+
+.menu-branding,
+.menu-nav {
+  @apply flex flex-col items-center justify-center w-full md:w-1/2 h-full transition-all duration-700;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu-nav {
+  @apply m-0 p-0 bg-slate-800/98 list-none -translate-y-full md:translate-y-0 md:translate-x-full;
+}
+
+.menu-nav.show {
+  @apply translate-y-0 translate-x-0;
+}
+
+.menu-branding {
+  @apply bg-slate-900/98 translate-y-full md:translate-y-0 md:-translate-x-full border-r border-slate-800;
+}
+
+.menu-branding.show {
+  @apply translate-y-0 translate-x-0;
+}
+
+.menu-branding .portrait {
+  @apply w-48 h-48 md:w-64 md:h-64 bg-no-repeat bg-center bg-cover rounded-full border-4 border-amber-400 shadow-[0_0_30px_rgba(251,191,36,0.3)];
+  background-image: url(../img/profile.jpg);
+}
+
+.nav-item {
+  @apply translate-x-full transition-all duration-500 ease-out opacity-0;
+}
+
+.nav-item.show {
+  @apply translate-x-0 opacity-100;
+}
+
+.nav-item.current > a {
+  @apply text-amber-400 font-bold;
+}
+
+.nav-link {
+  @apply inline-block relative text-3xl md:text-5xl uppercase py-4 px-8 font-black text-white no-underline transition-all duration-300 ease-out hover:text-amber-400 hover:tracking-widest;
+}
+
+main {
+  @apply flex flex-col justify-center items-start min-h-screen px-8 md:px-24 py-20 animate-fade-in-up;
+}
+
+.lg-heading {
+  @apply text-6xl md:text-9xl font-black mb-6 leading-tight tracking-tighter;
+}
+
+.text-secondary {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500;
+}
+
+.sm-heading {
+  @apply text-xl md:text-2xl font-medium mb-10 py-3 px-6 bg-slate-800/40 rounded-2xl backdrop-blur-md border border-slate-700/50 shadow-xl;
+}
+
+.icons {
+  @apply flex gap-8 mt-6;
+}
+
+.icons a {
+  @apply text-slate-400 transition-all duration-300 hover:text-amber-400 hover:-translate-y-2 hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.5)];
+}
+
+/* Delay for nav items */
+.nav-item:nth-child(1) { transition-delay: 0.1s; }
+.nav-item:nth-child(2) { transition-delay: 0.2s; }
+.nav-item:nth-child(3) { transition-delay: 0.3s; }
+.nav-item:nth-child(4) { transition-delay: 0.4s; }
+
+/* Grid for About Page */
+.about-info {
+  @apply grid gap-10 grid-cols-1 lg:grid-cols-3 mt-12;
+}
+
+.bio-image {
+  @apply w-48 h-48 lg:w-full lg:h-auto aspect-square rounded-[2rem] border-4 border-amber-400 shadow-2xl object-cover grayscale transition-all duration-500 hover:grayscale-0;
+}
+
+.bio {
+  @apply lg:col-span-2 text-lg md:text-2xl leading-relaxed text-slate-300 font-light;
+}
+
+.job {
+  @apply bg-slate-800/40 p-10 rounded-[2rem] border-t border-slate-700/50 backdrop-blur-md transition-all duration-500 hover:bg-slate-800/60 hover:-translate-y-2 hover:shadow-2xl hover:border-amber-400/50;
+}
+
+.job h3 {
+  @apply text-2xl font-black mb-2;
+}
+
+.job h4 {
+  @apply text-amber-400 font-semibold mb-6 tracking-wider uppercase text-sm;
+}
+
+.job p {
+  @apply text-slate-400 leading-relaxed;
+}
+
+footer {
+  @apply flex items-center justify-center p-12 bg-slate-950 text-slate-600 text-sm border-t border-slate-900 font-medium;
+}

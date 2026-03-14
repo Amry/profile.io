@@ -1,18 +1,18 @@
 {
   "name": "profile.io",
   "version": "1.0.0",
-  "description": "Portfolio website",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/amry/profile.io.git"
-  },
+  "description": "Modern Portfolio website",
+  "type": "module",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "node-sass": "^4.9.2"
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
   }
 }
