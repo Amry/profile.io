@@ -4,7 +4,6 @@ import "../css/main.css";
 const menuBtn = document.querySelector(".menu-btn") as HTMLButtonElement;
 const menu = document.querySelector(".menu") as HTMLElement;
 const menuNav = document.querySelector(".menu-nav") as HTMLElement;
-const menuBranding = document.querySelector(".menu-branding") as HTMLElement;
 const navItems = document.querySelectorAll(".nav-item");
 
 let showMenu = false;
@@ -15,7 +14,6 @@ const toggleMenu = () => {
   menuBtn.classList.toggle("close", showMenu);
   menu.classList.toggle("show", showMenu);
   menuNav.classList.toggle("show", showMenu);
-  menuBranding.classList.toggle("show", showMenu);
   navItems.forEach((item) => item.classList.toggle("show", showMenu));
 };
 

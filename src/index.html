@@ -30,7 +30,7 @@
     />
     <title>Amry Olimov | Portfolio</title>
     <link rel="manifest" href="./manifest.webmanifest" />
-    <meta name="theme-color" content="#eece1a" />
+    <meta name="theme-color" content="#fbbf24" />
   </head>
 
   <body id="bg-img" class="preload">
@@ -41,9 +41,6 @@
         <div class="btn-line"></div>
       </button>
       <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait" aria-label="Amry Olimov Portrait"></div>
-        </div>
         <ul class="menu-nav">
           <li class="nav-item current">
             <a href="index.html" class="nav-link">Home</a>
@@ -62,25 +59,58 @@
     </header>
 
     <main id="home">
-      <h1 class="lg-heading">Amry <span class="text-secondary">Olimov</span></h1>
-      <h2 class="sm-heading">Full Stack Web Developer & Engineer</h2>
+      <div class="hero-content">
+        <p class="greeting text-amber-300 font-medium mb-4 uppercase tracking-widest">Hey fellow human! 👽</p>
+        <h1 class="lg-heading mb-6">Hi, I'm <span class="text-secondary">Amry</span></h1>
+        <h2 class="mission-statement text-3xl md:text-4xl font-light mb-12 leading-tight max-w-2xl">
+          I build digital experiences that are <span class="font-bold">impactful</span>, 
+          <span class="font-bold italic">intuitive</span>, and a bit <span class="text-secondary underline decoration-2 underline-offset-8">delightful</span>.
+        </h2>
 
-      <div class="flex gap-4 mb-10">
-        <a
-          href="work.html"
-          class="bg-amber-400 text-slate-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-white hover:-translate-y-1 shadow-lg shadow-amber-400/20"
-        >
-          View My Work
-        </a>
-        <a
-          href="contact.html"
-          class="bg-slate-800/50 text-white px-8 py-4 rounded-xl font-bold border border-slate-700 backdrop-blur-md transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1"
-        >
-          Contact Me
-        </a>
+        <div class="flex flex-wrap gap-4 mb-16">
+          <a
+            href="work.html"
+            class="bg-amber-400 text-slate-900 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-white hover:-translate-y-1 shadow-lg shadow-amber-400/20"
+          >
+            See my work
+          </a>
+          <a
+            href="about.html"
+            class="bg-slate-800/50 text-white px-8 py-4 rounded-xl font-bold border border-slate-700 backdrop-blur-md transition-all duration-300 hover:bg-slate-700 hover:-translate-y-1"
+          >
+            Read my story
+          </a>
+        </div>
       </div>
 
-      <div class="icons">
+      <div class="latest-work mt-20">
+        <h3 class="text-xl uppercase tracking-widest text-slate-400 mb-8 flex items-center gap-4">
+          Latest Work <span class="h-px bg-slate-700 flex-grow"></span>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="mini-project group cursor-pointer">
+            <div class="aspect-video bg-slate-800 rounded-2xl overflow-hidden mb-4 border border-slate-700 transition-all duration-500 group-hover:border-amber-400/50">
+              <img src="./img/background.webp" alt="Work 1" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+            </div>
+            <h4 class="text-xl font-bold group-hover:text-amber-400 transition-colors">AppFolio</h4>
+            <p class="text-slate-400">Humanizing property management technology.</p>
+          </div>
+          <div class="mini-project group cursor-pointer">
+            <div class="aspect-video bg-slate-800 rounded-2xl overflow-hidden mb-4 border border-slate-700 transition-all duration-500 group-hover:border-amber-400/50">
+              <img src="./img/background.webp" alt="Work 2" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
+            </div>
+            <h4 class="text-xl font-bold group-hover:text-amber-400 transition-colors">Pear Deck</h4>
+            <p class="text-slate-400">Empowering educators with interactive tools.</p>
+          </div>
+        </div>
+        <div class="mt-12">
+          <a href="work.html" class="text-amber-400 hover:text-white transition-colors font-medium flex items-center gap-2 group">
+            See more work <i class="fas fa-arrow-right transition-transform group-hover:translate-x-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="icons mt-20 pt-10 border-t border-slate-800">
         <a href="#!" aria-label="Twitter Profile"> <i class="fab fa-twitter fa-2x"></i> </a>
         <a href="#!" aria-label="LinkedIn Profile"> <i class="fab fa-linkedin fa-2x"></i> </a>
         <a href="#!" aria-label="GitHub Profile"> <i class="fab fa-github fa-2x"></i> </a>
