@@ -1,0 +1,18 @@
+{
+  "name": "Amry Olimov | Portfolio",
+  "short_name": "Amry Portfolio",
+  "description": "Full Stack Web Developer & Engineer Portfolio",
+  "start_url": "/profile.io/",
+  "display": "standalone",
+  "background_color": "#444444",
+  "theme_color": "#eece1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/profile.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
